@@ -152,10 +152,10 @@ def tree_generate(dataset, flag, key, father_attr_index=-1):
 
 if __name__ == '__main__':
     # 读取数据集
-    dataset_train, flag_train = load_dataset(dataset_dir='./dataset/',
+    dataset_train, flag_train = load_dataset(dataset_dir='./datasets/',
                                              dataset_name='dna.data',
                                              is_log=False)
-    dataset_test, flag_test = load_dataset(dataset_dir='./dataset/',
+    dataset_test, flag_test = load_dataset(dataset_dir='./datasets/',
                                            dataset_name='dna.test',
                                            is_log=False)
     # 转换处理数据集
