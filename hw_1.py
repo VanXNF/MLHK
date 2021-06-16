@@ -1,4 +1,5 @@
 # -*- coding: utf-8 -*-
+import random
 from math import log2
 import numpy as np
 from graphviz import Digraph
@@ -262,45 +263,6 @@ def tree_generate(dataset, flag, attrset, key='root', father_attr_index=-1, is_l
                           is_log=is_log)
 
 
-def cal_tree_leaves(tree):
-    """
-    计算树的叶子节点数\n
-    :param tree: 树节点列表
-    :return:
-    """
-    leaf_num = 0
-    for node in tree:
-        if node[0] == 'root':
-            continue
-        if node[1] == -1:
-            leaf_num += 1
-    return leaf_num
-
-
-def cal_max_depth(tree, index=0):
-    """
-    计算最大树深度\n
-    :param tree: 树节点列表
-    :param index: 树节点列表中的位置
-    :return:
-    """
-    tree_node = tree[index]
-    if tree_node[1] == -1:
-        # 到达叶节点，返回深度 1
-        return 1
-    else:
-        # 非叶节点，返回孩子节点深度 +1
-        max_depth = 0
-        for i in range(index, len(tree)):
-            node = tree[i]
-            if node[2] == tree_node[1]:
-                # 找到孩子
-                depth = cal_max_depth(tree, i)
-                if depth > max_depth:
-                    max_depth = depth
-        return max_depth + 1
-
-
 def remove_zero_node(tree):
     """
     去除零结点\n
@@ -314,9 +276,59 @@ def remove_zero_node(tree):
     return new_tree
 
 
-def predict_by_tree(data):
-    # todo 实现输出
-    print()
+def draw_tree(tree, graph, index=0, father_index=-1):
+    """
+    绘制决策树\n
+    :param tree: 树节点列表
+    :param graph: 图
+    :param index: 树节点列表中的位置
+    :param father_index: 父节点在列表中的位置
+    :return:
+    """
+    tree_node = tree[index]
+    if tree_node[1] == -1:
+        graph.node(f"{index}",
+                   label=f"father:{tree_node[2]}\nkey:{tree_node[0]}\nclass:{tree_node[3]}\nnumber:{tree_node[4]}\n")
+        graph.edge(f"{father_index}", f"{index}")
+        return
+    else:
+        # 非叶节点
+        graph.node(f"{index}",
+                   label=f"attr:{tree_node[1]}\nfather:{tree_node[2]}\nkey:{tree_node[0]}\nnumber:{tree_node[4]}\n")
+        if father_index != -1:
+            graph.edge(f"{father_index}", f"{index}")
+        for i in range(index + 1, len(tree)):
+            node = tree[i]
+            if node[2] == tree_node[1]:
+                draw_tree(tree, graph, i, index)
+
+
+def predict_by_tree(data, tree, index=0, is_log=False):
+    """
+    根据决策树预测类别\n
+    :param data: 待预测数据
+    :param tree: 决策树
+    :param index: 决策树节点位置
+    :param is_log: 是否输出日志
+    :return:
+    """
+    tree_node = tree[index]
+    if tree_node[1] == -1:
+        return tree_node[3]
+    else:
+        # 非叶节点
+        attr_index = tree_node[1]
+        key = data[attr_index]
+        if is_log:
+            print(f"attr:{attr_index}, key:{key}")
+        for i in range(index, len(tree)):
+            node = tree[i]
+            if node[2] == attr_index:
+                if node[0] == key:
+                    if is_log:
+                        print(i)
+                    node_class = predict_by_tree(data, tree, i, is_log)
+                    return node_class
 
 
 # 全局决策树节点列表
@@ -324,32 +336,31 @@ tree_node_list = []
 
 if __name__ == '__main__':
     # 读取数据集
-    # dataset_train, flag_train = load_dataset(dataset_dir='./datasets/',
-    #                                          dataset_name='dna.data',
-    #                                          is_log=False)
-    # dataset_test, flag_test = load_dataset(dataset_dir='./datasets/',
-    #                                        dataset_name='dna.test',
-    #                                        is_log=False)
-    # # 转换处理数据集
-    # dataset_train = transfer_dataset(dataset_train)
-    # dataset_test = transfer_dataset(dataset_test)
-    # # 属性集
-    # attr_set = np.ones([1, 60])[0]
-    # tree_generate(dataset=dataset_train, flag=flag_train, attrset=attr_set, is_log=True)
-
-    # print(node_list)
-    # for node in tree_node_list:
-    #     print(node[:5])
-    # print(cal_tree_leaves(tree=tree_node_list))
-
-    # tree_node_list = remove_zero_node(tree_node_list)
-    # for node in tree_node_list:
-    #     print(node[:5])
-
-    # print(cal_tree_leaves(tree=tree_node_list))
-    # print(cal_max_depth(tree_node_list, index=0))
-    g = Digraph('G', filename='test', format='png')
-    g.node('test1', label='1223')
-    g.node('test2', label='abcde \n大撒把看吧 \n大大', fontname="Sarasa Mono SC")
-    g.edge('test1', 'test2')
+    dataset_train, flag_train = load_dataset(dataset_dir='datasets/',
+                                             dataset_name='dna.data',
+                                             is_log=False)
+    dataset_test, flag_test = load_dataset(dataset_dir='datasets/',
+                                           dataset_name='dna.test',
+                                           is_log=False)
+    # 转换处理数据集
+    dataset_train = transfer_dataset(dataset_train)
+    dataset_test = transfer_dataset(dataset_test)
+    # 属性集
+    attr_set = np.ones([1, 60])[0]
+    # 生成决策树
+    tree_generate(dataset=dataset_train, flag=flag_train, attrset=attr_set, is_log=False)
+    # 除去元素数量为 0 的节点
+    tree_node_list = remove_zero_node(tree_node_list)
+    # 绘制决策树
+    g = Digraph('G', filename='hw1/tree', format='png')
+    draw_tree(tree_node_list, g)
     g.view()
+
+    # 测试集错误率计算
+    count = 0
+    for i in range(0, len(dataset_test)):
+        class_tree = predict_by_tree(dataset_test[i], tree_node_list)
+        if class_tree != flag_test[i]:
+            # print(i, class_tree, flag_test[i])
+            count += 1
+    print(f"测试集错误率为:{count / len(dataset_test)}")

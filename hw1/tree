@@ -1,0 +1,1141 @@
+digraph G {
+	0 [label="attr:29
+father:-1
+key:root
+number:2000
+"]
+	1 [label="attr:31
+father:29
+key:A
+number:290
+"]
+	0 -> 1
+	2 [label="attr:37
+father:31
+key:A
+number:79
+"]
+	1 -> 2
+	3 [label="father:37
+key:A
+class:3
+number:28
+"]
+	2 -> 3
+	4 [label="father:37
+key:C
+class:3
+number:15
+"]
+	2 -> 4
+	5 [label="father:37
+key:G
+class:3
+number:25
+"]
+	2 -> 5
+	6 [label="attr:28
+father:37
+key:T
+number:11
+"]
+	2 -> 6
+	7 [label="father:28
+key:A
+class:3
+number:4
+"]
+	6 -> 7
+	8 [label="father:28
+key:C
+class:3
+number:2
+"]
+	6 -> 8
+	9 [label="father:28
+key:G
+class:3
+number:4
+"]
+	6 -> 9
+	10 [label="father:28
+key:T
+class:1
+number:1
+"]
+	6 -> 10
+	11 [label="father:31
+key:C
+class:3
+number:66
+"]
+	1 -> 11
+	12 [label="attr:6
+father:31
+key:G
+number:61
+"]
+	1 -> 12
+	13 [label="father:6
+key:A
+class:3
+number:17
+"]
+	12 -> 13
+	14 [label="father:6
+key:C
+class:3
+number:17
+"]
+	12 -> 14
+	15 [label="father:6
+key:G
+class:3
+number:18
+"]
+	12 -> 15
+	16 [label="attr:13
+father:6
+key:T
+number:9
+"]
+	12 -> 16
+	17 [label="father:13
+key:A
+class:3
+number:3
+"]
+	16 -> 17
+	18 [label="father:13
+key:C
+class:3
+number:2
+"]
+	16 -> 18
+	19 [label="father:13
+key:G
+class:3
+number:3
+"]
+	16 -> 19
+	20 [label="father:13
+key:T
+class:2
+number:1
+"]
+	16 -> 20
+	21 [label="attr:30
+father:31
+key:T
+number:84
+"]
+	1 -> 21
+	22 [label="father:30
+key:A
+class:3
+number:11
+"]
+	21 -> 22
+	23 [label="father:30
+key:C
+class:3
+number:18
+"]
+	21 -> 23
+	24 [label="attr:34
+father:30
+key:G
+number:40
+"]
+	21 -> 24
+	25 [label="attr:0
+father:34
+key:A
+number:5
+"]
+	24 -> 25
+	26 [label="father:0
+key:A
+class:3
+number:1
+"]
+	25 -> 26
+	27 [label="father:0
+key:C
+class:3
+number:2
+"]
+	25 -> 27
+	28 [label="father:0
+key:G
+class:1
+number:1
+"]
+	25 -> 28
+	29 [label="father:0
+key:T
+class:3
+number:1
+"]
+	25 -> 29
+	30 [label="father:34
+key:C
+class:3
+number:4
+"]
+	24 -> 30
+	31 [label="attr:32
+father:34
+key:G
+number:29
+"]
+	24 -> 31
+	32 [label="father:32
+key:A
+class:1
+number:18
+"]
+	31 -> 32
+	33 [label="father:32
+key:C
+class:3
+number:1
+"]
+	31 -> 33
+	34 [label="father:32
+key:G
+class:1
+number:10
+"]
+	31 -> 34
+	35 [label="father:34
+key:T
+class:3
+number:2
+"]
+	24 -> 35
+	36 [label="father:30
+key:T
+class:3
+number:15
+"]
+	21 -> 36
+	37 [label="attr:33
+father:29
+key:C
+number:286
+"]
+	0 -> 37
+	38 [label="attr:12
+father:33
+key:A
+number:72
+"]
+	37 -> 38
+	39 [label="father:12
+key:A
+class:3
+number:21
+"]
+	38 -> 39
+	40 [label="attr:50
+father:12
+key:C
+number:22
+"]
+	38 -> 40
+	41 [label="attr:1
+father:50
+key:A
+number:4
+"]
+	40 -> 41
+	42 [label="father:1
+key:A
+class:1
+number:1
+"]
+	41 -> 42
+	43 [label="father:1
+key:C
+class:1
+number:1
+"]
+	41 -> 43
+	44 [label="father:1
+key:G
+class:3
+number:2
+"]
+	41 -> 44
+	45 [label="father:50
+key:C
+class:3
+number:8
+"]
+	40 -> 45
+	46 [label="father:50
+key:G
+class:3
+number:5
+"]
+	40 -> 46
+	47 [label="father:50
+key:T
+class:3
+number:5
+"]
+	40 -> 47
+	48 [label="attr:35
+father:12
+key:G
+number:12
+"]
+	38 -> 48
+	49 [label="father:12
+key:T
+class:3
+number:17
+"]
+	38 -> 49
+	50 [label="attr:16
+father:33
+key:C
+number:68
+"]
+	37 -> 50
+	51 [label="attr:7
+father:16
+key:A
+number:12
+"]
+	50 -> 51
+	52 [label="father:7
+key:A
+class:3
+number:2
+"]
+	51 -> 52
+	53 [label="father:7
+key:C
+class:3
+number:4
+"]
+	51 -> 53
+	54 [label="father:7
+key:G
+class:3
+number:4
+"]
+	51 -> 54
+	55 [label="attr:2
+father:7
+key:T
+number:2
+"]
+	51 -> 55
+	56 [label="father:16
+key:C
+class:3
+number:18
+"]
+	50 -> 56
+	57 [label="father:16
+key:G
+class:3
+number:14
+"]
+	50 -> 57
+	58 [label="father:16
+key:T
+class:3
+number:24
+"]
+	50 -> 58
+	59 [label="attr:53
+father:33
+key:G
+number:83
+"]
+	37 -> 59
+	60 [label="attr:57
+father:53
+key:A
+number:11
+"]
+	59 -> 60
+	61 [label="father:57
+key:A
+class:3
+number:2
+"]
+	60 -> 61
+	62 [label="father:57
+key:C
+class:2
+number:1
+"]
+	60 -> 62
+	63 [label="father:57
+key:G
+class:3
+number:5
+"]
+	60 -> 63
+	64 [label="father:57
+key:T
+class:3
+number:3
+"]
+	60 -> 64
+	65 [label="father:53
+key:C
+class:3
+number:21
+"]
+	59 -> 65
+	66 [label="father:53
+key:G
+class:3
+number:33
+"]
+	59 -> 66
+	67 [label="father:53
+key:T
+class:3
+number:18
+"]
+	59 -> 67
+	68 [label="father:33
+key:T
+class:3
+number:63
+"]
+	37 -> 68
+	69 [label="attr:27
+father:29
+key:G
+number:1159
+"]
+	0 -> 69
+	70 [label="attr:20
+father:27
+key:A
+number:219
+"]
+	69 -> 70
+	71 [label="attr:45
+father:20
+key:A
+number:44
+"]
+	70 -> 71
+	72 [label="attr:3
+father:45
+key:A
+number:11
+"]
+	71 -> 72
+	73 [label="father:3
+key:A
+class:1
+number:2
+"]
+	72 -> 73
+	74 [label="father:3
+key:C
+class:3
+number:3
+"]
+	72 -> 74
+	75 [label="father:3
+key:G
+class:3
+number:4
+"]
+	72 -> 75
+	76 [label="father:3
+key:T
+class:3
+number:2
+"]
+	72 -> 76
+	77 [label="attr:8
+father:45
+key:C
+number:12
+"]
+	71 -> 77
+	78 [label="father:8
+key:A
+class:1
+number:1
+"]
+	77 -> 78
+	79 [label="attr:11
+father:8
+key:C
+number:5
+"]
+	77 -> 79
+	80 [label="father:11
+key:A
+class:1
+number:1
+"]
+	79 -> 80
+	81 [label="father:11
+key:C
+class:3
+number:1
+"]
+	79 -> 81
+	82 [label="father:11
+key:G
+class:1
+number:2
+"]
+	79 -> 82
+	83 [label="father:11
+key:T
+class:1
+number:1
+"]
+	79 -> 83
+	84 [label="father:8
+key:G
+class:1
+number:3
+"]
+	77 -> 84
+	85 [label="father:8
+key:T
+class:3
+number:3
+"]
+	77 -> 85
+	86 [label="attr:14
+father:45
+key:G
+number:14
+"]
+	71 -> 86
+	87 [label="father:14
+key:A
+class:1
+number:2
+"]
+	86 -> 87
+	88 [label="attr:9
+father:14
+key:C
+number:7
+"]
+	86 -> 88
+	89 [label="father:9
+key:A
+class:3
+number:2
+"]
+	88 -> 89
+	90 [label="father:9
+key:C
+class:3
+number:1
+"]
+	88 -> 90
+	91 [label="father:9
+key:G
+class:1
+number:1
+"]
+	88 -> 91
+	92 [label="father:9
+key:T
+class:3
+number:3
+"]
+	88 -> 92
+	93 [label="father:14
+key:G
+class:3
+number:3
+"]
+	86 -> 93
+	94 [label="father:14
+key:T
+class:3
+number:2
+"]
+	86 -> 94
+	95 [label="attr:5
+father:45
+key:T
+number:7
+"]
+	71 -> 95
+	96 [label="father:5
+key:A
+class:1
+number:3
+"]
+	95 -> 96
+	97 [label="father:5
+key:C
+class:1
+number:2
+"]
+	95 -> 97
+	98 [label="father:5
+key:G
+class:3
+number:1
+"]
+	95 -> 98
+	99 [label="father:5
+key:T
+class:1
+number:1
+"]
+	95 -> 99
+	100 [label="attr:40
+father:20
+key:C
+number:54
+"]
+	70 -> 100
+	101 [label="attr:46
+father:40
+key:A
+number:9
+"]
+	100 -> 101
+	102 [label="father:46
+key:A
+class:3
+number:5
+"]
+	101 -> 102
+	103 [label="attr:10
+father:46
+key:C
+number:2
+"]
+	101 -> 103
+	104 [label="father:46
+key:G
+class:1
+number:1
+"]
+	101 -> 104
+	105 [label="father:46
+key:T
+class:1
+number:1
+"]
+	101 -> 105
+	106 [label="attr:18
+father:40
+key:C
+number:11
+"]
+	100 -> 106
+	107 [label="attr:4
+father:18
+key:A
+number:3
+"]
+	106 -> 107
+	108 [label="father:18
+key:C
+class:3
+number:2
+"]
+	106 -> 108
+	109 [label="father:18
+key:G
+class:3
+number:4
+"]
+	106 -> 109
+	110 [label="father:18
+key:T
+class:1
+number:2
+"]
+	106 -> 110
+	111 [label="attr:19
+father:40
+key:G
+number:26
+"]
+	100 -> 111
+	112 [label="attr:15
+father:19
+key:A
+number:9
+"]
+	111 -> 112
+	113 [label="father:15
+key:A
+class:1
+number:5
+"]
+	112 -> 113
+	114 [label="father:19
+key:C
+class:1
+number:7
+"]
+	111 -> 114
+	115 [label="attr:38
+father:19
+key:G
+number:6
+"]
+	111 -> 115
+	116 [label="father:38
+key:A
+class:3
+number:1
+"]
+	115 -> 116
+	117 [label="father:38
+key:C
+class:3
+number:2
+"]
+	115 -> 117
+	118 [label="father:38
+key:G
+class:3
+number:1
+"]
+	115 -> 118
+	119 [label="father:38
+key:T
+class:1
+number:2
+"]
+	115 -> 119
+	120 [label="father:19
+key:T
+class:1
+number:4
+"]
+	111 -> 120
+	121 [label="attr:22
+father:40
+key:T
+number:8
+"]
+	100 -> 121
+	122 [label="father:22
+key:A
+class:1
+number:3
+"]
+	121 -> 122
+	123 [label="attr:17
+father:22
+key:C
+number:2
+"]
+	121 -> 123
+	124 [label="father:17
+key:A
+class:1
+number:1
+"]
+	123 -> 124
+	125 [label="father:22
+key:G
+class:3
+number:1
+"]
+	121 -> 125
+	126 [label="father:22
+key:T
+class:1
+number:2
+"]
+	121 -> 126
+	127 [label="attr:26
+father:20
+key:G
+number:76
+"]
+	70 -> 127
+	128 [label="attr:21
+father:26
+key:A
+number:12
+"]
+	127 -> 128
+	129 [label="father:21
+key:A
+class:3
+number:2
+"]
+	128 -> 129
+	130 [label="father:21
+key:C
+class:1
+number:5
+"]
+	128 -> 130
+	131 [label="attr:42
+father:21
+key:G
+number:4
+"]
+	128 -> 131
+	132 [label="father:42
+key:A
+class:3
+number:1
+"]
+	131 -> 132
+	133 [label="father:42
+key:C
+class:1
+number:1
+"]
+	131 -> 133
+	134 [label="father:21
+key:T
+class:1
+number:1
+"]
+	128 -> 134
+	135 [label="attr:55
+father:26
+key:C
+number:39
+"]
+	127 -> 135
+	136 [label="attr:23
+father:55
+key:A
+number:7
+"]
+	135 -> 136
+	137 [label="father:23
+key:A
+class:1
+number:1
+"]
+	136 -> 137
+	138 [label="father:23
+key:C
+class:3
+number:2
+"]
+	136 -> 138
+	139 [label="father:23
+key:G
+class:3
+number:2
+"]
+	136 -> 139
+	140 [label="father:23
+key:T
+class:3
+number:2
+"]
+	136 -> 140
+	141 [label="father:55
+key:C
+class:1
+number:12
+"]
+	135 -> 141
+	142 [label="father:55
+key:G
+class:1
+number:4
+"]
+	135 -> 142
+	143 [label="attr:25
+father:55
+key:T
+number:16
+"]
+	135 -> 143
+	144 [label="attr:24
+father:25
+key:A
+number:2
+"]
+	143 -> 144
+	145 [label="father:24
+key:A
+class:1
+number:1
+"]
+	144 -> 145
+	146 [label="attr:36
+father:25
+key:C
+number:2
+"]
+	143 -> 146
+	147 [label="father:36
+key:A
+class:3
+number:1
+"]
+	146 -> 147
+	148 [label="attr:43
+father:25
+key:G
+number:3
+"]
+	143 -> 148
+	149 [label="father:43
+key:A
+class:3
+number:1
+"]
+	148 -> 149
+	150 [label="father:43
+key:C
+class:1
+number:1
+"]
+	148 -> 150
+	151 [label="father:43
+key:G
+class:3
+number:1
+"]
+	148 -> 151
+	152 [label="father:25
+key:T
+class:1
+number:9
+"]
+	143 -> 152
+	153 [label="attr:59
+father:26
+key:G
+number:20
+"]
+	127 -> 153
+	154 [label="father:59
+key:A
+class:3
+number:1
+"]
+	153 -> 154
+	155 [label="attr:39
+father:59
+key:C
+number:6
+"]
+	153 -> 155
+	156 [label="father:39
+key:A
+class:1
+number:2
+"]
+	155 -> 156
+	157 [label="father:39
+key:C
+class:3
+number:1
+"]
+	155 -> 157
+	158 [label="father:39
+key:G
+class:3
+number:1
+"]
+	155 -> 158
+	159 [label="attr:41
+father:39
+key:T
+number:2
+"]
+	155 -> 159
+	160 [label="attr:48
+father:59
+key:G
+number:6
+"]
+	153 -> 160
+	161 [label="father:48
+key:A
+class:3
+number:1
+"]
+	160 -> 161
+	162 [label="father:48
+key:C
+class:3
+number:1
+"]
+	160 -> 162
+	163 [label="father:48
+key:G
+class:1
+number:3
+"]
+	160 -> 163
+	164 [label="father:48
+key:T
+class:3
+number:1
+"]
+	160 -> 164
+	165 [label="father:59
+key:T
+class:1
+number:7
+"]
+	153 -> 165
+	166 [label="father:26
+key:T
+class:3
+number:5
+"]
+	127 -> 166
+	167 [label="attr:56
+father:20
+key:T
+number:45
+"]
+	70 -> 167
+	168 [label="attr:54
+father:56
+key:A
+number:7
+"]
+	167 -> 168
+	169 [label="father:54
+key:A
+class:2
+number:3
+"]
+	168 -> 169
+	170 [label="father:54
+key:C
+class:2
+number:1
+"]
+	168 -> 170
+	171 [label="father:54
+key:G
+class:3
+number:1
+"]
+	168 -> 171
+	172 [label="attr:44
+father:54
+key:T
+number:2
+"]
+	168 -> 172
+	173 [label="father:44
+key:A
+class:3
+number:1
+"]
+	172 -> 173
+	174 [label="attr:47
+father:56
+key:C
+number:11
+"]
+	167 -> 174
+	175 [label="father:47
+key:A
+class:3
+number:1
+"]
+	174 -> 175
+	176 [label="father:47
+key:C
+class:1
+number:3
+"]
+	174 -> 176
+	177 [label="attr:49
+father:47
+key:G
+number:5
+"]
+	174 -> 177
+	178 [label="father:47
+key:T
+class:1
+number:2
+"]
+	174 -> 178
+	179 [label="attr:51
+father:56
+key:G
+number:15
+"]
+	167 -> 179
+	180 [label="father:51
+key:A
+class:3
+number:1
+"]
+	179 -> 180
+	181 [label="attr:52
+father:56
+key:T
+number:12
+"]
+	167 -> 181
+	182 [label="father:52
+key:A
+class:3
+number:1
+"]
+	181 -> 182
+	183 [label="father:52
+key:C
+class:1
+number:1
+"]
+	181 -> 183
+	184 [label="father:52
+key:G
+class:1
+number:7
+"]
+	181 -> 184
+	185 [label="father:52
+key:T
+class:2
+number:3
+"]
+	181 -> 185
+	186 [label="father:27
+key:C
+class:2
+number:628
+"]
+	69 -> 186
+	187 [label="father:27
+key:G
+class:3
+number:150
+"]
+	69 -> 187
+	188 [label="father:27
+key:T
+class:2
+number:162
+"]
+	69 -> 188
+	189 [label="father:29
+key:T
+class:3
+number:265
+"]
+	0 -> 189
+}
