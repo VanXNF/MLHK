@@ -2,8 +2,6 @@
 import math
 import random
 import os
-import numpy as np
-from matplotlib import pyplot as plt
 import pylab as pl
 
 random.seed(0)
@@ -102,11 +100,11 @@ def sigmoid_derivative(fx):
 def draw_error_log(log_path):
     """
     绘制错误率曲线\n
-    :param log_file_path: 日志路径
+    :param log_path: 日志路径
     :return:
     """
     y = []
-    with open(log_file_path, 'r') as log:
+    with open(log_path, 'r') as log:
         for line in log.readlines():
             y.append(float(line))
     x = range(len(y))
@@ -236,7 +234,7 @@ class BPNetwork:
             error += 0.5 * (label[o] - self.output_cells[o]) ** 2
         return error
 
-    def train(self, cases, labels, limit=10000, learn_rate=0.05, correct_rate=0.1, log_file_path=None):
+    def train(self, cases, labels, limit=10000, learn_rate=0.05, correct_rate=0.1, log_path=None):
         """
         训练
         :param cases: 样本列表
@@ -244,7 +242,7 @@ class BPNetwork:
         :param limit: 最大迭代次数
         :param learn_rate: 学习率
         :param correct_rate: 矫正率
-        :param log_file_path: 日志文件路径
+        :param log_path: 日志文件路径
         :return:
         """
         for j in range(limit):
@@ -253,8 +251,8 @@ class BPNetwork:
                 label = labels[i]
                 case = cases[i]
                 error += self.back_propagate(case, label, learn_rate, correct_rate)
-            if log_file_path is not None:
-                with open(log_file_path, 'a') as log:
+            if log_path is not None:
+                with open(log_path, 'a') as log:
                     log.write(f"{error}\n")
             print(f"epoch: {j + self.epoch}, error: {error}")
             if j % 10 == 0 or j == limit - 1:
@@ -328,17 +326,17 @@ if __name__ == "__main__":
     dataset_test, flag_test = load_dataset(dataset_dir='datasets/',
                                            dataset_name='dna.test',
                                            is_log=False)
-    model_path = "./hw2/180_15_3.model"
+    model_file_path = "./hw2/180_15_3.model"
     log_file_path = './hw2/180_15_3.log'
     bp = BPNetwork()
     # 训练
-    bp.setup(ni=180, nh=15, no=3, model_path=model_path)
+    bp.setup(ni=180, nh=15, no=3, model_path=model_file_path)
     bp.train(cases=dataset_train,
              labels=flag_train,
              limit=1000,
              learn_rate=0.05,
              correct_rate=0.1,
-             log_file_path=log_file_path)
+             log_path=log_file_path)
     # 绘制错误率曲线
     draw_error_log(log_path=log_file_path)
     # 测试
