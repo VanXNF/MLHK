@@ -1,5 +1,4 @@
 # -*- coding: utf-8 -*-
-import random
 from math import log2
 import numpy as np
 from graphviz import Digraph
@@ -59,11 +58,11 @@ def cal_class(flag, is_log=False):
     :return: flag_class 标签类别分布字典
     """
     flag_class = {}
-    for it in flag:
-        if flag_class.get(it) is None:
-            flag_class[it] = 1
+    for i in flag:
+        if flag_class.get(i) is None:
+            flag_class[i] = 1
         else:
-            flag_class[it] += 1
+            flag_class[i] += 1
     if is_log:
         print(f"flag_class: {flag_class}")
     return flag_class
@@ -358,9 +357,9 @@ if __name__ == '__main__':
 
     # 测试集错误率计算
     count = 0
-    for i in range(0, len(dataset_test)):
-        class_tree = predict_by_tree(dataset_test[i], tree_node_list)
-        if class_tree != flag_test[i]:
-            # print(i, class_tree, flag_test[i])
+    for it in range(0, len(dataset_test)):
+        class_tree = predict_by_tree(dataset_test[it], tree_node_list)
+        if class_tree != flag_test[it]:
+            # print(it, class_tree, flag_test[it])
             count += 1
     print(f"测试集错误率为:{count / len(dataset_test)}")
