@@ -30,7 +30,7 @@ import numpy as np
 import struct
 import matplotlib.pyplot as plt
 
-data_path = './datasets/mnist'
+data_path = 'datasets/MNIST'
 # 训练集文件
 train_images_idx3_ubyte_file = f'{data_path}/train-images.idx3-ubyte'
 # 训练集标签文件

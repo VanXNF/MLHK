@@ -335,11 +335,11 @@ tree_node_list = []
 
 if __name__ == '__main__':
     # 读取数据集
-    dataset_train, flag_train = load_dataset(dataset_dir='datasets/',
-                                             dataset_name='dna.data',
+    dataset_train, flag_train = load_dataset(dataset_dir='datasets/DNA',
+                                             dataset_name='DNA.data',
                                              is_log=False)
-    dataset_test, flag_test = load_dataset(dataset_dir='datasets/',
-                                           dataset_name='dna.test',
+    dataset_test, flag_test = load_dataset(dataset_dir='datasets/DNA',
+                                           dataset_name='DNA.test',
                                            is_log=False)
     # 转换处理数据集
     dataset_train = transfer_dataset(dataset_train)

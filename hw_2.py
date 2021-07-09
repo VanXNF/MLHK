@@ -320,11 +320,11 @@ class BPNetwork:
 
 if __name__ == "__main__":
     # 读取数据集
-    dataset_train, flag_train = load_dataset(dataset_dir='datasets/',
-                                             dataset_name='dna.data',
+    dataset_train, flag_train = load_dataset(dataset_dir='datasets/DNA',
+                                             dataset_name='DNA.data',
                                              is_log=False)
-    dataset_test, flag_test = load_dataset(dataset_dir='datasets/',
-                                           dataset_name='dna.test',
+    dataset_test, flag_test = load_dataset(dataset_dir='datasets/DNA',
+                                           dataset_name='DNA.test',
                                            is_log=False)
     model_file_path = "./hw2/180_15_3.model"
     log_file_path = './hw2/180_15_3.log'
